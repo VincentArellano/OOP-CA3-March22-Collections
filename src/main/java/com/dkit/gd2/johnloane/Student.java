@@ -1,6 +1,6 @@
 package com.dkit.gd2.johnloane;
 
-public class Student
+public class Student implements Comparable<Student>
 {
     private int id;
     private String name;
@@ -27,4 +27,11 @@ public class Student
     {
         return age;
     }
+
+
+    @Override
+    public int compareTo(Student o) {
+        return 0;
+    }
+
 }
