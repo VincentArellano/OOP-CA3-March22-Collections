@@ -35,24 +35,24 @@ public class App
 
         System.out.println("\n\nQuestion 3");
         //Question 3
-        //List<String> oneHundredStrings = new ArrayList<>();
-        //populateOneHundredStrings(oneHundredStrings);
-        //questionThreePartA(oneHundredStrings);
-        //questionThreePartB();
+        List<String> oneHundredStrings = new ArrayList<>();
+        populateOneHundredStrings(oneHundredStrings);
+        questionThreePartA(oneHundredStrings);
+        questionThreePartB();
 
         System.out.println("\n\nQuestion 4");
         //Question 4
-        //compareTwoStudents();
-        //questionFourPartA();
-        //questionFourPartB();
+        compareTwoStudents();
+        questionFourPartA();
+        questionFourPartB();
         //questionFourPartC();
     }
 
     //The method below relates to Question 4
     private static void compareTwoStudents()
     {
-        Student alex1 = new Student(1, "Alex", 22);
-        Student alex2 = new Student(1, "Alex", 22);
+        Student alex1 = new Student(1, "Alex", 23);
+        Student alex2 = new Student(2, "Alex", 22);
         System.out.println("alex1 hashcode = " + alex1.hashCode());
         System.out.println("alex2 hashcode = " + alex2.hashCode());
         System.out.println("Checking equality between alex1 and alex2 = " + alex1.equals(alex2));
@@ -212,4 +212,31 @@ public class App
         System.out.println("head of queue-"
                 + head);
     }
+
+    public static List<String> questionThreePartA(List<String> list){
+        Set<List<String>> listOfStrings = new LinkedHashSet<>();
+        listOfStrings.add(list);
+        List<String> newList = new ArrayList<>();
+
+        for(String n:list){
+            if(!newList.contains(n)){
+                newList.add(n);
+            }
+        }
+        return newList;
+    }
+
+    public static void questionThreePartB(){
+        System.out.println("The complexity of the solution is O(N) as removing duplicates depends on how many duplicates there is and is O(logN) to sort the list");
+    }
+
+    public static void questionFourPartA(){
+        System.out.println("It return false as it the students is implied different");
+    }
+
+    public static void questionFourPartB() {
+        System.out.println("There is no equal method implemented");
+    }
+
+
 }
